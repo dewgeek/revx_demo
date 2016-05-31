@@ -1,0 +1,11 @@
+<div class="ngCellText" ng-class="col.colIndex()"> 
+
+	<!-- UI-Grid uses isolate scope, so there is no access to your application scope variables from a row or cell template. By default, the parent scope of the ui-grid element is assigned to a property on $scope.grid named appScope. -->
+
+	<button class="btn btn-link" ng-click="grid.appScope.show_job(grid.renderContainers.body.visibleRowCache.indexOf(row))">
+		{{COL_FIELD}}
+	</button> 
+	
+	
+	
+</div>

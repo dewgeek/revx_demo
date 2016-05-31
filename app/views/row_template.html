@@ -1,0 +1,12 @@
+
+<div ng-if="row.entity.count == 0">
+	<div class="ui-grid-cell" ui-grid-cell ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns " >
+	</div>
+</div>
+<div ng-if="row.entity.count > 0">
+	<a ng-click="grid.appScope.labeled_jobs(row.entity.status)" >
+		<div class="ui-grid-cell" ui-grid-cell ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns " >
+			
+		</div>
+	</a>
+</div>

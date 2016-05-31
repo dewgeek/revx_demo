@@ -1,0 +1,45 @@
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/devil.png" alt="I'm DewGeek"><br>
+    <br>
+    A little Description of what's here. If you accidentally fumbled in here, there isn't much useful for you.
+  </p>
+  
+</div>
+<pre>
+  I have made this Angular app with a little help from Yoeman. 
+  I have used Grunt instead of Gulp for running tasks, because I have used grunt beforehand. 
+  It will watchover the file changes and reload the server during development.
+  Grunt runs converts all my sass files into CSS files using Compass. 
+  All the dependencies are managed by Bower. It will add components into my Index.html file automatically.
+  UI-Grid angular dependency is used for the tables. I included UI.Bootstrap, just in case.
+</pre>
+<div class="row ">
+  
+  <div class="col-sm-12">
+    <h4>Scheduled Jobs</h4>
+    <div ui-grid="sorted_jobs_grid" ></div>
+  </div>
+
+  <!-- DONT REPLACE WITH NG-SHOW, IT WON'T POPULATE TABLE -->
+  <div class="col-sm-12" ng-if="show_labeled_jobs"> 
+    <h4>
+      Jobs with Status: {{current_job_label}}
+
+      <span class="pointer glyphicon glyphicon-remove pull-right" ng-click="close_labeled_jobs()">
+    </h4>
+    <div ui-grid="labeled_jobs_grid"  ></div>
+  </div>
+
+  <div class="col-sm-12" ng-if="show_job_flag">
+    <h5>Log<span class="pointer glyphicon glyphicon-remove pull-right" ng-click="close_job()"></h5>
+    <pre>
+        {{ current_job | json }}
+      </pre>
+  </div>
+  
+    
+
+    
+</div>
